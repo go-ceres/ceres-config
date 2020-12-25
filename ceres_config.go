@@ -44,7 +44,7 @@ type Values interface {
 	String() string
 }
 type Value interface {
-	Exists() bool
+	IsEmpty() bool
 	Bool(def bool) bool
 	Int(def int) int
 	String(def string) string

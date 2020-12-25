@@ -192,7 +192,11 @@ func (j *JSONValue) StringSlice(def []string) []string {
 	return j.Json.MustStringArray(def)
 }
 
-func (j *JSONValue) Exists() bool {
+func (j *JSONValue) IsEmpty() bool {
+	inf := j.Json.Interface()
+	if inf == nil {
+		return true
+	}
 	return false
 }
 
